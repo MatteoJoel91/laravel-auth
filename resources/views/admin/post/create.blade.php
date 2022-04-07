@@ -9,12 +9,12 @@
 
         <div class="mb-3">
           <label for="title" class="form-label">Titolo</label>
-          <input type="title" class="form-control" id="title" name="title">
+          <input type="title" class="form-control" id="title" name="title" value="{{old('title', '')}}">
         </div>
 
         <div class="mb-3">
           <label for="content" class="form-label">Contenuto post</label>
-          <textarea class="form-control" id="content" rows="8" name="content"></textarea>
+          <textarea class="form-control" id="content" rows="8" name="content" value="{{old('content', '')}}"></textarea>
         </div>
         
         <button type="submit" class="btn btn-primary">Invia</button>
