@@ -7,6 +7,16 @@
 
         @csrf
 
+        <div class="form-group mb-3">
+          <label for="category_id">Categoria</label>
+          <select class="form-control" id="category_id" name="category_id" aria-label="Default select example">
+            <option value="">Nessuna categoria</option>
+            @foreach ($categories as $category)
+                <option {{old('category_id') == $category->id ? 'selected' : ''}} value="{{$category->id}}">{{$category->name}}</option>
+            @endforeach
+          </select>
+        </div>
+
         <div class="mb-3">
           <label for="title" class="form-label">Titolo</label>
           <input type="title" class="form-control" id="title" name="title" value="{{old('title', '')}}">
